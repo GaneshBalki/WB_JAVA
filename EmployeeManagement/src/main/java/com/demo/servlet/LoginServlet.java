@@ -31,7 +31,7 @@ public class LoginServlet extends HttpServlet {
 		LoginData ld = ads.validateAdmin(username,password);
 		
 		if(ld==null) {
-			out.println("<h4><span id='s1'>X</span> Invalid Username or Password</h4>");
+			out.println("<h2 style='color:red'>Invalid UserName or PassWord</h2>");
 			RequestDispatcher rd = request.getRequestDispatcher("admin_login.html");
 			rd.include(request, response);
 		}
@@ -44,6 +44,7 @@ public class LoginServlet extends HttpServlet {
 			rd1.forward(request, response);
 			
 		}
+		
 	}
 
 }

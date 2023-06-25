@@ -29,12 +29,12 @@ public class AdminRegistrationServlet extends HttpServlet {
 		int status=ads.registerAdmin(new LoginData(username,password,role));
 		
 		if(status>0) {
-			out.println("<h2>Registration Done !!!</h2>");
+			out.println("<h2 style='color:green'>Registration Done !!!</h2>");
 			RequestDispatcher rd=request.getRequestDispatcher("admin_login.html");
 			rd.include(request, response);
 		}
 		else {
-			out.println("<h2>Registration Failed XX</h2>");
+			out.println("<h2 style='color:red'>X UserName Already Exists</h2>");
 			RequestDispatcher rd=request.getRequestDispatcher("AdminRegistration.html");
 			rd.include(request, response);
 		}
