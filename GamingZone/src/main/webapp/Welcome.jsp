@@ -90,9 +90,10 @@
 </head>
 <body>
 	<header>
-		<b><span>GameZone Shopping Center</span></b> <a href="#">Home</a> | <a
-			href="#">Category</a> | <a href="#">Login</a> |
+		<b><span style="color: #4CAF50">GameZone Shopping Center</span></b> <a href="#">Home</a> | <a
+			href="#">Category</a> | <a href="#" >Login</a> 
 	</header>
+
 	<%
 	ProductService ps = new ProductServiceImpl();
 	List<Product> plist = ps.getAllProducts();
@@ -108,7 +109,7 @@
 				<input type='hidden' name='cid' value='<%=p.getCatId() %>' />
 				<input type='hidden' name='cid' value='<%=p.getQty() %>' /> 
 				
-				<img src='<%=p.getImgurl() %>' alt="KEYBORD" width="250px">
+				<a href="#"><img src='<%=p.getImgurl() %>' alt="KEYBORD" width="250px"></a>
 				<p><%=p.getPname() %></p>
 				<p><%=p.getPrice() %> &#x20b9</p>
 			
