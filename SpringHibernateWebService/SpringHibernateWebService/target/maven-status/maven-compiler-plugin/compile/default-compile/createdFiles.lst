@@ -1,0 +1,6 @@
+com\demo\beans\Product.class
+com\demo\restcontroller\ProductController.class
+com\demo\dao\ProductDaoImpl.class
+com\demo\dao\ProductDao.class
+com\demo\service\ProductService.class
+com\demo\service\ProductServiceImpl.class
